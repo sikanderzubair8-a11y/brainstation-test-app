@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Color Deck</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-labelledby="app-title">
+        <div class="intro">
+          <p class="eyebrow">Vercel test app</p>
+          <h1 id="app-title">Color Deck</h1>
+          <p class="lede">Generate a quick palette, lock favorites, and preview it on a poster.</p>
+        </div>
+
+        <div class="toolbar" aria-label="Palette controls">
+          <button class="primary" id="generateBtn" type="button">Generate</button>
+          <button id="copyAllBtn" type="button">Copy all</button>
+          <button id="resetBtn" type="button">Reset</button>
+        </div>
+
+        <div class="layout">
+          <section class="palette-panel" aria-label="Generated colors">
+            <div class="swatches" id="swatches"></div>
+          </section>
+
+          <section class="preview-panel" aria-label="Poster preview">
+            <div class="poster" id="poster">
+              <div class="poster-band"></div>
+              <div class="poster-grid">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="poster-copy">
+                <p>Sample launch</p>
+                <h2>Design test</h2>
+                <small id="posterCodes"></small>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <p class="status" id="status" role="status" aria-live="polite">Ready to generate.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
